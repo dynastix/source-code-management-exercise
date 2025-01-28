@@ -1,13 +1,8 @@
 def gcd(a: int, b: int) -> int:
-    if a > b:
-        minimum = b
+    if(b == 0):
+        return a
     else:
-        minimum = a
-    for i in range(1, minimum + 1):
-        if((a % i == 0) and (b % i == 0)):
-            gcd = i
-             
-    return gcd
+        return gcd(b, a % b)
 
 # Test cases
 print(gcd(54, 24))  # Expected output: 6
