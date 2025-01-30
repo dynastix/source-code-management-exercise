@@ -4,26 +4,16 @@ def gcd(a: int, b: int) -> int:
     using the Euclidean algorithm.
     """
     # Implement your solution here
-    if (a >= b):
-        r = a%b
-        if (r == 0):
-            return b
-        else:
-            return gcd(b, r)
+    if (b > a):
+        x = a
+        a = b
+        b = x
+    r = a%b
+    if (r == 0):
+        return b
     else:
-        r = b%a
-        if (r == 0):
-            return a
-        else:
-            return gcd(a, r)
+        return gcd(b, r)
 #    pass
-print('a = ', end='')
-a = int(input())
-print()
-
-print('b = ', end='')
-b = int(input())
-print()
-
-print('GCD = ', gcd(a, b))
-
+print(gcd(54, 24))  # Expected output: 6
+print(gcd(48, 18))  # Expected output: 6
+print(gcd(101, 10))  # Expected output: 1
