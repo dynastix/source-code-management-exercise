@@ -9,7 +9,7 @@ def gcd(a: int, b: int) -> int:
     if (a == b):
         print("NOTE: Entered integers are equal.")
         return a
-    #This switches the inputs if the denominator is greater
+    #This switches the inputs if the divisor is greater
     if (b > a):
         gcd(b, a)
     #This tests for inputs that are 0
