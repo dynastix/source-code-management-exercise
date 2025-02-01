@@ -5,12 +5,16 @@ def gcd(a: int, b: int) -> int:
     """
 
     if a < 0:
-        raise ValueError("Please input a positive number for 'a'")
+        raise ValueError("'a' cannot be a negative number")
     if b < 0:
-        raise ValueError("Please input a postive number for 'b'")
+        raise ValueError("'b' cannot be a negative number")
+    
+    if a == 0 and b == 0:
+        raise ValueError("Both numbers cannot be Zero!")
     
     if b == 0:
         return a
+    
     else:
         return gcd(b, a % b)
     
