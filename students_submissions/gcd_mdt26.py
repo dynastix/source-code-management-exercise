@@ -29,17 +29,12 @@ def gcd(a: int, b: int) -> int:
         print("NOTE: Dividend is prime. Returning 1.")
         return 1
 
-    #Seperates actual function from the function that checks the values
-    #so that at each recurrence, it doesn't keep unecessarily checking.
-    return gcd_funct(a, b)
-#    pass
-
-def gcd_funct(a: int, b: int) -> int:
     r = a%b
     if (r == 0):
         return b
     else:
-        return gcd_funct(b,r)
+        return gcd(b, r)
+#    pass
 
 #This function tests whether a number is prime
 def isPrime(a: int) -> bool:
@@ -55,9 +50,13 @@ def isPrime(a: int) -> bool:
         i += 1
     return True
 
-#Testing purposes
-print("a = ", end='')
-a = int(input())
-print('\nb = ', end='')
-b = int(input())
-print(f'\ngcd({a}, {b}) = {gcd(a,b)}')
+#TESTS
+#print(gcd(54, 24))  # Expected output: 6
+#print(gcd(24, 54))  # Expected output: 6, same as above
+#print(gcd(48, 18))  # Expected output: 6
+#print(gcd(101, 10))  # Expected output: prints a note, and 1
+#print(gcd(100, 0)) # Expected output: prints error message
+#print(gcd(100, -2)) # Expected output: prints error message
+#print(gcd(100,100)) # Expected output: prints a note indicating equality
+#print(gcd(21, 4)) # Expected output: 1
+#print(gcd(100,5)) # Expected output: 5
