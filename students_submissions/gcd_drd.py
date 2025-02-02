@@ -4,7 +4,8 @@ def gcd(a: int, b: int) -> int:
     """
     # Error handling for negative inputs
     if a < 0 or b < 0:
-        raise ValueError("Both inputs must be positive integers.")
+        print("Both inputs must be positive integers.")
+        return
     
     # Base cases for recursion
     if b == 0:
