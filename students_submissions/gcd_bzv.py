@@ -5,12 +5,16 @@ def gcd(a: int, b: int) -> int:
     using the Euclidean algorithm with recursion.
     """
 
+    if not isinstance(a, int) or not isinstance(b, int):
+        # print("type error")
+        return None;
+
     if a < 0 or b < 0:
-        print("Positive numbers only!");
+        # print("Positive numbers only!");
         return None;
 
     if a == 0 and b == 0:
-        print("GCD(0,0) is not defined!");
+        # print("GCD(0,0) is not defined!");
         return None;
     # Base Case
     if b == 0:
@@ -30,3 +34,4 @@ print(gcd(0, 0));     # Error
 print(gcd(-5, 10));   # Error
 print(gcd(20, -4));   # Error
 print(gcd(-8, -12));  # Error
+print(gcd("2", 4));   # Error
