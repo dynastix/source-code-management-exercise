@@ -82,5 +82,6 @@ def load_and_run():
             print(f"ERROR: {module_name}'s submission does not have a gcd function\n")
 
 
+# This is the entry point of the script
 if __name__ == "__main__":
     load_and_run()
