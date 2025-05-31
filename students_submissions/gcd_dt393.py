@@ -100,8 +100,8 @@ print(gcd(101, 10))  # Expected output: 1
 # print(gcd(4, 0))
 
 
-print(gcd(4, -5))
-print(gcd(40, 2))
-print(gcd(2, 12))
+# print(gcd(4, -5))
+# print(gcd(40, 2))
+# print(gcd(2, 12))
 
 
