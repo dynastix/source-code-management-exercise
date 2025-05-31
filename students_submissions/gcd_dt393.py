@@ -2,11 +2,6 @@
 
 
 
-
-
-
-
-
 import math
 
 def gcd(a: int, b: int) -> int:
@@ -108,21 +103,5 @@ print(gcd(101, 10))  # Expected output: 1
 print(gcd(4, -5))
 print(gcd(40, 2))
 print(gcd(2, 12))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
